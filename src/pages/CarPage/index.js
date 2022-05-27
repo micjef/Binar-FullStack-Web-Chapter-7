@@ -2,7 +2,7 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import Jumbotron from "../../components/jumbotron";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/navbar/Navbar";
 
 const CarPage = () => {
   return (

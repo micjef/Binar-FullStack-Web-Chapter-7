@@ -1,17 +1,25 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import "./App.css";
 import '@popperjs/core';
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap/dist/js/bootstrap.min.js";
-import 'bootstrap/dist/js/bootstrap.bundle';
-import CarPage from "./pages/CarPage";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import SearchPage from "./pages/SearchPage";
+import Login from "./pages/Auth/Login";
+import Logout from "./pages/Auth/Logout";
+import Register from "./pages/Auth/Register";
 
 function App() {
   return (
-    <>
-      <CarPage />
-    </>
-
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
